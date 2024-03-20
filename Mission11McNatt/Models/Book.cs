@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Mission11McNatt.Models;
+﻿namespace Mission11McNatt.Models;
 
 public partial class Book
 {

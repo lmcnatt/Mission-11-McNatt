@@ -33,6 +33,6 @@ public class HomeController : Controller
       }
     };
 
-    return View();
+    return View(blvm);
   }
 }

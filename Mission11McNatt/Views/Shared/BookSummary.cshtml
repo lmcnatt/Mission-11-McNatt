@@ -1,0 +1,17 @@
+@model Book
+
+<div class="col-md-6">
+  <div class="card m-1 p-1">
+    <h6 class="display-6">
+      @Model.Title
+      <span class="badge rounded-pill bg-success text-white float-end"><small>$@Model.Price</small></span>
+    </h6>
+    <ul>
+      <li>Author: @Model.Author</li>
+      <li>Genre: @Model.Category (@Model.Classification)</li>
+      <li>Number of Pages: @Model.PageCount</li>
+      <li>Publisher: @Model.Publisher</li>
+      <li>ISBN: @Model.Isbn</li>
+    </ul>
+  </div>
+</div>

@@ -1,8 +1,16 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+  ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model BooksListViewModel
+
+<h1 class="display-4">Hilton's Books</h1>
+
+<div class="row">
+  @foreach (Book b in Model.Books)
+  {
+    <partial name="BookSummary" model="b" />
+  }
 </div>
+
+<div page-model="@Model.PaginationInfo" page-action="Index" page-classes-enabled="true" page-class-selected="active"></div>

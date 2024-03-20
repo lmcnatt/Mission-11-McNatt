@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.SignalR;
 using Microsoft.Net.Http.Headers;
 using Mission11McNatt.Models.ViewModels;
 
-namespace TheWaterProject.Infrastructure
+namespace Mission11McNatt.Infrastructure
 {
   [HtmlTargetElement("div", Attributes="page-model")]
   public class PaginationTagHelper : TagHelper
@@ -27,7 +27,7 @@ namespace TheWaterProject.Infrastructure
     public PaginationInfo PageModel { get; set; }
 
     public bool PageClassesEnabled { get; set; } = false;
-    public string PageClass { get; set; } = string.Empty;
+    // public string PageClass { get; set; } = string.Empty;
     public string PageClassNormal { get; set; } = string.Empty;
     public string PageClassSelected { get; set; } = string.Empty;
 
@@ -47,17 +47,18 @@ namespace TheWaterProject.Infrastructure
           TagBuilder a = new TagBuilder("a");
           a.Attributes["href"] = urlHelper.Action(PageAction, new { pageNum = i });
           a.Attributes["class"] = "page-link";
-
-          // if (PageClassesEnabled) // From videos
-          {
-            a.AddCssClass(PageClass);
-            a.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
-          }
-
           a.InnerHtml.Append(i.ToString());
 
           li.Attributes["class"] = "page-item";
+
+          if (PageClassesEnabled) // From videos
+          {
+          //  a.AddCssClass(PageClass);
+           li.AddCssClass(i == PageModel.CurrentPage ? PageClassSelected : PageClassNormal);
+          }
+
           li.InnerHtml.AppendHtml(a);
+          ul.InnerHtml.AppendHtml(li);
           // result.InnerHtml.AppendHtml(a); // Videos
         }
         result.InnerHtml.AppendHtml(ul);
