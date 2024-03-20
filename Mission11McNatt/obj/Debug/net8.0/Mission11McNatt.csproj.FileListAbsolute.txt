@@ -125,3 +125,4 @@ C:\Users\logan\Logan\BYU\Winter 2024\IS 413 - Enterprise Application Development
 C:\Users\logan\Logan\BYU\Winter 2024\IS 413 - Enterprise Application Development\Mission 11 McNatt\Mission11McNatt\obj\Debug\net8.0\Mission11McNatt.pdb
 C:\Users\logan\Logan\BYU\Winter 2024\IS 413 - Enterprise Application Development\Mission 11 McNatt\Mission11McNatt\obj\Debug\net8.0\Mission11McNatt.genruntimeconfig.cache
 C:\Users\logan\Logan\BYU\Winter 2024\IS 413 - Enterprise Application Development\Mission 11 McNatt\Mission11McNatt\obj\Debug\net8.0\ref\Mission11McNatt.dll
+C:\Users\logan\Logan\BYU\Winter 2024\IS 413 - Enterprise Application Development\Mission 11 McNatt\Mission11McNatt\obj\Debug\net8.0\Mission11McNatt.sourcelink.json
